@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.androidhive"
+    android:versionCode="1"
+    android:versionName="1.0" 
+    >
+
+    <uses-sdk android:minSdkVersion="8" />
+    
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" 
+        >
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.example.androidhive.AndroidTabAndListView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">"
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Inbox Activity -->
+        <activity android:name="com.example.androidhive.ScanActivity" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.INBOX" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            
+            </activity>
+
+        <!-- Outbox Activity -->
+        <activity android:name="com.example.androidhive.CreateActivity" />
+        
+        <activity android:name="com.example.androidhive.Email" />
+         <activity android:name="com.example.androidhive.Contact"/>
+         <activity android:name="com.example.androidhive.URL" />
+    
+        <!-- Profile Activity -->
+        <activity android:name="com.example.androidhive.DatabaseView" />
+         <activity android:name="com.example.androidhive.DatabaseViewCall" />
+    </application>
+
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.CAMERA"/>
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+</manifest>
